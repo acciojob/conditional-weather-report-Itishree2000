@@ -1,7 +1,7 @@
 import React from "react";
 import './../styles/App.css'; // Import your CSS file here
 
-const App = () => {
+// const App = () => {
   // Sample weather input
   // const weatherData = { temperature: 25, conditions: "Sunny" };
   // const threshold = 20;
@@ -16,15 +16,20 @@ const App = () => {
   //     </div>
   //   </div>
   // );
-  const weatherData={temperature:25,conditions:"Sunny"};
-  const threshold=20;
-  const isAboveThreshold=weatherData.temperature>threshold;
-  return(
+//  import React from "react";
+const App = () => {
+  const weatherData = { temperature: 25, conditions: "Sunny" };
+  const threshold = 20;
+  const temperatureClass = weatherData.temperature > threshold ? 'above-threshold' : 'below-threshold';
+
+  return (
     <div className="main">
-      <p>Temperature:<span className={isAboveThreshold?'above-threshold':'below-threshold'}>{weatherData.temperature}°C</span></p>
-      <p>condition:{weatherData.conditions}</p>
+      <p className={temperatureClass}>
+        Temperature: {weatherData.temperature}°C
+      </p>
+      <p>Condition: {weatherData.conditions}</p>
     </div>
-  )
+  );
 };
 
 export default App;
