@@ -24,12 +24,14 @@ const App = () => {
 
   return (
     <div className="main">
+      <span>
       <p>
-        Temperature: <span className={temperatureClass}>{weatherData.temperature}</span>
+        Temperature:<p className={temperatureClass}>{weatherData.temperature}</p>
       </p>
-      <p>Condition:<span> {weatherData.conditions}
+      <p>Condition:{weatherData.conditions}
+      
+      </p>
       </span>
-      </p>
     </div>
   );
 };
