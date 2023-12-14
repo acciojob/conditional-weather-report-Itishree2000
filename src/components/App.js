@@ -24,8 +24,8 @@ const App = () => {
 
   return (
     <div className="main">
-      <p className={temperatureClass}>
-        Temperature: {weatherData.temperature}°C
+      <p>
+        Temperature: <span className={temperatureClass}>{weatherData.temperature}°C</span>
       </p>
       <p>Condition: {weatherData.conditions}</p>
     </div>
@@ -33,4 +33,5 @@ const App = () => {
 };
 
 export default App;
+
 
